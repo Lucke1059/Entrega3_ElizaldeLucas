@@ -23,46 +23,6 @@ Bootstrap 5: Framework CSS para diseño responsivo y componentes predefinidos.
 
 JavaScript (ES6+): Funcionalidades dinámicas y manipulación del DOM.
 
-Estructura del Proyecto
-El proyecto sigue una estructura modular para facilitar el mantenimiento y escalabilidad:
-
-css
-Copiar
-Editar
-├── index.html
-├── pages/
-│   ├── servicios.html
-│   ├── nosotros.html
-│   └── contacto.html
-├── sass/
-│   ├── base/
-│   │   ├── _reset.scss
-│   │   └── _typography.scss
-│   ├── components/
-│   │   ├── _buttons.scss
-│   │   └── _cards.scss
-│   ├── layout/
-│   │   ├── _header.scss
-│   │   ├── _footer.scss
-│   │   └── _grid.scss
-│   ├── pages/
-│   │   ├── _home.scss
-│   │   ├── _services.scss
-│   │   ├── _about.scss
-│   │   └── _contact.scss
-│   ├── utils/
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   │   └── _functions.scss
-│   └── main.scss
-├── css/
-│   └── main.css
-├── js/
-│   ├── scripts.js
-│   └── navbar.js
-└── assets/
-    ├── images/
-    └── fonts/
 Funcionalidades Destacadas
 Diseño Responsivo: Adaptabilidad en dispositivos móviles y de escritorio utilizando Bootstrap y media queries personalizadas.
 

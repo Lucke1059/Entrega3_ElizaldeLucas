@@ -1,18 +1,26 @@
+@use '../base/typography' as ext;
+@use '../utils/variables' as var;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 .servicios {
+    background-color: #0d0d0d;
     padding: 4rem 2rem;
+    font-family: 'Orbitron', sans-serif;
 
     &__intro {
         text-align: center;
         margin-bottom: 3rem;
 
         h2 {
-            font-size: 2.5rem;
-            color: $primary-color;
+            font-size: 3rem;
+            color: #00ffe0;
+            text-shadow: 0 0 10px #00ffe0;
         }
 
         p {
-            font-size: 1.2rem;
-            color: $text-light;
+            font-size: 1.3rem;
+            color: #ccc;
         }
     }
 
@@ -24,42 +32,70 @@
     }
 
     .servicio {
-        background-color: $card-bg;
-        padding: 1.5rem;
+        background-color: rgba(25, 25, 25, 0.95);
+        padding: 2rem;
         border-radius: 1rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ff00f2;
+        box-shadow: 0 0 15px #ff00f2;
         text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
         max-width: 400px;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+            transform: scale(1.03);
+            box-shadow: 0 0 25px #00ffe0;
+            border-color: #00ffe0;
         }
 
         img {
             width: 100%;
-            height: auto;
+            height: 200px;
             border-radius: 0.75rem;
+            object-fit: cover;
             margin-bottom: 1rem;
         }
 
         h3 {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            color: $primary-color;
+            color: #ff00f2;
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
         }
 
         p {
             font-size: 1rem;
-            color: $text-light;
+            color: #aaa;
+        }
+
+        i {
+            font-size: 2rem;
+            color: #ffea00;
+            margin-bottom: 0.8rem;
+            animation: flicker 2s infinite;
         }
     }
 
-    .servicio img {
-        object-fit: cover;
-        height: 200px;
-        width: 100%;
-        border-radius: 0.75rem;
+    .text-neon {
+        color: #00ffe0;
+        text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.4;
     }
 }

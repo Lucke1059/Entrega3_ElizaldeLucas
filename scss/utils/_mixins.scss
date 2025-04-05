@@ -1,15 +1,52 @@
 // Mixins para estilos comunes
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @mixin respond-to($breakpoint) {
-    @if $breakpoint == 'mobile' {
-      @media (max-width: 768px) { @content; }
-    }
-    @else if $breakpoint == 'tablet' {
-      @media (max-width: 1024px) { @content; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint =='mobile' {
+    @media (max-width: 768px) {
+      @content;
     }
   }
+
+  @else if $breakpoint =='tablet' {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// Mixin para un botón estilizado
+@mixin boton-estilado($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+// Mixin para un botón con sombra
+@mixin fade-in($duration: 1s) {
+  animation: fadeIn $duration ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

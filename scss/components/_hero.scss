@@ -1,3 +1,20 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as var;
+
+.hero__content .btn {
+  @include boton-estilado($primary-color, #fff);
+}
+
+.btn {
+  @include boton-estilado($primary-color, #fff);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.05);
+  }
+}
+
 .hero {
   position: relative;
   background: url('/assets/img/Programacion-Imagen.jpg') no-repeat center center / cover;
@@ -49,10 +66,12 @@
   }
 
   .hero__content {
+    @include fade-in(1.2s);
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
     padding: 5rem 2rem;
   }
+
 }

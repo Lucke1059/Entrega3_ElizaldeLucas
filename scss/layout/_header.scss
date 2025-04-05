@@ -1,0 +1,11 @@
+// Estilos del Header
+.main-header {
+    background-color: $primary-color;
+    padding: $padding-base;
+    color: white;
+  
+    nav ul {
+      @include flex-center;
+      gap: 1rem;
+    }
+  }

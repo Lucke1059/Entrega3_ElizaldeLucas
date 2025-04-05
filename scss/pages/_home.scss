@@ -1,0 +1,14 @@
+// Estilos para el homepage
+#servicios, #nosotros, #contacto {
+    padding: 2rem 0;
+    text-align: center;
+  
+    p {
+      max-width: 600px;
+      margin: auto;
+    }
+  
+    @include respond-to('mobile') {
+      padding: 1rem 0;
+    }
+  }

@@ -1,0 +1,20 @@
+# node modules
+node_modules/
+
+# archivos compilados
+css/styles.css
+css/styles.css.map
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# sass cache
+.sass-cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# otros
+*.log

@@ -5,42 +5,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdmByte</title>
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tipografía Cyberpunk -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="js/navbar.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
-<body>
+<body class="cyberpunk-bg">
     <!--Header-->
     <div id="header"></div>
 
-    <!--Sección para apoyar el Header-->
+    <!--Sección Hero con Estilo Cyberpunk-->
     <section class="hero">
         <div class="hero__content">
-            <h1>Bienvenido a AdmByte</h1>
-            <p>Soluciones tecnológicas a tu medida</p>
-            <a href="#servicios" class="btn">Ver Servicios</a>
+            <h1 class="neon-title">Bienvenido a AdmByte</h1>
+            <p class="neon-subtitle">Soluciones tecnológicas a tu medida</p>
+            <a href="#servicios" class="btn-cyberpunk">Ver Servicios</a>
         </div>
     </section>
 
     <!--Main Content-->
-    <main class="container mt-5">
-        <section id="servicios" class="my-5">
-            <h2>Servicios</h2>
-            <p>Ofrecemos soluciones tecnológicas personalizadas...</p>
-        </section>
+    <main class="container mt-5 text-light">
+        <section class="carrusel-section my-5">
+            <h2 class="section-title glitch" data-text="Nuestros Servicios">Nuestros Servicios</h2>
 
-        <section id="nosotros" class="my-5">
-            <h2>Sobre nosotros</h2>
-            <p>Somos un equipo apasionado por la tecnología...</p>
-        </section>
+            <div id="carruselServicios" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-        <section id="contacto" class="my-5">
-            <h2>Contacto</h2>
-            <p>¡Escribinos para más info!</p>
+                    <div class="carousel-item active">
+                        <div class="carousel-card neon-card">
+                            <i class="fas fa-tools"></i>
+                            <h3>Reparación de PCs</h3>
+                            <p>Solucionamos fallas de hardware y software como unos verdaderos netrunners.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-card neon-card">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Instalación de Redes</h3>
+                            <p>Te conectamos hasta con los vecinos si hace falta, todo bien cableado.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-card neon-card">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Optimización de Equipos</h3>
+                            <p>Le sacamos el máximo rendimiento a tu máquina. FPS al cielo, bro 🎮</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Botones de navegación -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselServicios"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselServicios"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
         </section>
     </main>
 
@@ -48,7 +84,6 @@
     <div id="footer"></div>
 
     <!--Scripts-->
-    <script src="js/scripts.js"></script>
     <script>
         fetch('/partials/header.html')
             .then(res => res.text())

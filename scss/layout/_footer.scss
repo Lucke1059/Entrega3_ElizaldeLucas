@@ -1,9 +1,9 @@
-// Estilos del Footer
 .footer {
-  background-color: #111;
-  color: #eee;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
+  background: linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
+  color: #e0e0e0;
+  padding: 3rem 1.5rem 2rem;
+  font-size: 0.95rem;
+  font-family: 'Orbitron', sans-serif;
 
   &__container {
     display: flex;
@@ -12,28 +12,47 @@
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    border-bottom: 2px solid #6f00ff;
+    padding-bottom: 2rem;
   }
 
   &__info,
   &__nav,
   &__redes {
-    flex: 1;
-    min-width: 200px;
+    flex: 1 1 250px;
 
-    h3,
-    h4 {
-      color: $secondary-color;
+    h3, h4 {
+      color: #00fff7;
       margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
     }
 
     a {
       color: #ccc;
       text-decoration: none;
-      display: block;
-      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s, transform 0.3s;
+
+      i {
+        color: #ff00c8;
+        font-size: 1rem;
+      }
 
       &:hover {
-        color: $primary-color;
+        color: #00fff7;
+        transform: translateX(4px);
       }
     }
   }
@@ -41,14 +60,43 @@
   &__bottom {
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid #444;
     padding-top: 1rem;
-    color: #aaa;
+    color: #888;
+    border-top: 1px solid #333;
+
+    strong {
+      color: #ff00c8;
+    }
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ff94;
+  color: #000;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 34px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #00ff94, 0 0 25px #00ff94;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  i {
+    font-size: 32px;
+    pointer-events: none;
   }
 
-  a i {
-    margin-right: 0.5rem;
-    color: $primary-color;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow:
+      0 0 20px #00ff94,
+      0 0 35px #00ff94,
+      0 0 50px #00ff94;
   }
-
 }

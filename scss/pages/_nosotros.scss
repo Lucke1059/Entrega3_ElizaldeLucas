@@ -73,9 +73,9 @@
                 transition: transform 0.4s ease, box-shadow 0.4s ease;
 
                 &:hover {
-                    transform: scale(1.05);
-                    box-shadow: 0 0 30px #0ff;
-                }
+                    transform: scale(1.05) rotate(3deg);
+                    filter: brightness(1.1);
+                  }
 
                 img {
                     border-radius: 50%;

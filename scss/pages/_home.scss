@@ -1,14 +1,159 @@
-// Estilos para el homepage
-#servicios, #nosotros, #contacto {
-    padding: 2rem 0;
-    text-align: center;
-  
-    p {
-      max-width: 600px;
-      margin: auto;
-    }
-  
-    @include respond-to('mobile') {
-      padding: 1rem 0;
-    }
+.cyberpunk-bg {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+}
+
+.neon-title {
+  font-size: 3rem;
+  color: #00fff7;
+  text-align: center;
+  margin-top: 3rem;
+  text-shadow: 0 0 5px #00fff7, 0 0 15px #00fff7, 0 0 30px #00fff7;
+}
+
+.neon-subtitle {
+  font-size: 1.3rem;
+  color: #ff2d95;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #ff2d95, 0 0 10px #ff2d95;
+}
+
+.neon-section {
+  color: #ffea00;
+  text-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00;
+}
+
+.btn-cyberpunk {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #ffea00;
+  border: 2px solid #ffea00;
+  border-radius: 10px;
+  text-shadow: 0 0 5px #ffea00;
+  box-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: #ffea00;
+    color: #000;
+    box-shadow: 0 0 20px #ffea00, 0 0 40px #ffea00;
   }
+}
+
+.carrusel-section {
+  text-align: center;
+  background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
+  padding: 4rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px #00fff7;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #00fff7;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px #00fff7;
+  position: relative;
+}
+
+.carousel-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 0 0 15px #ff00cc;
+  transition: transform 0.5s ease;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00fff7;
+}
+
+.carousel-card i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7;
+}
+
+.carousel-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #00fff7;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+.carrusel-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #00fff7 1%, transparent 10%),
+      radial-gradient(circle, #ff00cc 1%, transparent 10%);
+    background-size: 20% 20%;
+    animation: neonGrid 10s linear infinite;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes neonGrid {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(10%, 10%) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+.carrusel-section {
+  box-shadow: 0 0 30px #00fff7, 0 0 60px #ff00cc;
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #ff00cc;
+  }
+
+  100% {
+    box-shadow: 0 0 30px #00fff7, 0 0 60px #ff00cc;
+  }
+}

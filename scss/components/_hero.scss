@@ -1,51 +1,58 @@
 .hero {
+  position: relative;
+  background: url('/assets/img/Programacion-Imagen.jpg') no-repeat center center / cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__content {
     position: relative;
-    background: url('/assets/img/Programacion-Imagen.jpg') no-repeat center center / cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+    max-width: 800px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.75rem 2rem;
+    background-color: $secondary-color;
     color: white;
-    padding: 0 1rem;
-    overflow: hidden;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5); // Ajustá el 0.5 para más/menos oscuridad
-      z-index: 1;
-    }
-  
-    &__content {
-      position: relative;
-      z-index: 2;
-      animation: fadeIn 2s ease-in-out;
-      max-width: 800px;
-    }
-  
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-  
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    .btn {
-      padding: 0.75rem 2rem;
-      background-color: $secondary-color;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: darken($secondary-color, 10%);
-      }
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
     }
   }
-  
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+}

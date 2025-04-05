@@ -12,7 +12,20 @@
 
 // 4. Pages
 @import 'pages/home';
+@import 'pages/servicios';
 
 // 5. Components
 @import 'components/navbar';
 @import 'components/hero';
+
+.card {
+    background-color: $card-bg;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}

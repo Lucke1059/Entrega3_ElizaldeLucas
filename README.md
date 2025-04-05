@@ -33,23 +33,3 @@ Botón Flotante de WhatsApp: Enlace directo para contacto rápido, con efectos d
 Animaciones y Transiciones: Efectos suaves aplicados a diversos elementos para mejorar la experiencia del usuario.
 
 Partículas en el Header: Implementación de un fondo animado con partículas en la sección del header para un efecto visual atractivo.
-
-Instalación y Uso
-Clonar el repositorio:
-
-bash
-Copiar
-Editar
-git clone https://github.com/lucke1059/Entrega3_ElizaldeLucas.git
-Navegar al directorio del proyecto:
-
-bash
-Copiar
-Editar
-cd Entrega3_ElizaldeLucas
-Abrir el archivo index.html en el navegador de preferencia.
-
-Notas
-Compilación de SASS: Se recomienda utilizar una extensión o herramienta que compile SASS a CSS en tiempo real para visualizar los cambios en los estilos.
-
-Enlaces Relativos: Asegurarse de que la estructura de carpetas se mantenga para el correcto funcionamiento de los enlaces y rutas de archivos.

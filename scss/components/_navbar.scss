@@ -1,61 +1,150 @@
 .navbar {
+  display: flex;
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: $primary-color; // reemplazá por tu variable
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  
-    &__logo {
-      font-size: 1.8rem;
-      font-weight: bold;
+    padding: 0 2rem;
+  }
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center; // 🔥 centramos los ítems
+
+    li a {
       color: white;
-    }
-  
-    &__links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-  
-      li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-  
-        &:hover {
-          color: $secondary-color;
-        }
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
       }
     }
-  
-    &__toggle {
+  }
+
+  &__toggle {
+    align-self: center;
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+
+    .navbar__links {
       display: none;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
+      flex-direction: column;
+      background-color: $primary-color;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
     }
-  
-    @media (max-width: 768px) {
-      &__links {
-        display: none;
-        flex-direction: column;
-        background-color: $primary-color;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-      }
-  
-      &__links.active {
-        display: flex;
-      }
-  
-      &__toggle {
-        display: block;
-      }
+
+    .navbar__links li {
+      padding: 0.8rem 0;
     }
-  }  
+
+    .navbar__links.active {
+      display: flex;
+    }
+
+    .navbar__logo {
+      flex: 1;
+    }
+
+    .navbar__toggle {
+      display: block;
+      margin-left: auto;
+    }
+
+    &__links {
+      display: none;
+      flex-direction: column;
+      background-color: $primary-color;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__links.active {
+      display: flex;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; // separa los ítems del menú
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($primary-color, 30%);
+    }
+  }
+
+  nav ul li a {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+}

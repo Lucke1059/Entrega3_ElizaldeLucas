@@ -7,23 +7,36 @@
     <title>AdmByte</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="js/navbar.js"></script>
 </head>
 
 <body>
+    <!--Header-->
     <header>
-        <nav class="navbar">
-            <div class="navbar__logo">ADMbyte</div>
-            <ul class="navbar__links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <div class="navbar__toggle" id="menu-toggle">☰</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar__container">
+                <div class="navbar__logo">ADMbyte</div>
+                <ul class="navbar__links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <div class="navbar__toggle" id="menu-toggle">☰</div>
+            </div>
         </nav>
     </header>
-
+    <!--Sección para apoyar el Header-->
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Bienvenido a AdmByte</h1>
+            <p>Soluciones tecnológicas a tu medida</p>
+            <a href="#servicios" class="btn">Ver Servicios</a>
+        </div>
+    </section>
+    <!--Main Content-->
     <main class="container mt-5">
         <section id="servicios" class="my-5">
             <h2>Servicios</h2>
@@ -41,8 +54,33 @@
         </section>
     </main>
 
-    <footer class="main-footer text-center py-3 bg-dark text-white">
-        <p>&copy; 2025 AdmByte. Todos los derechos reservados.</p>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__info">
+                <h3>AdmByte</h3>
+                <p>Soluciones digitales con actitud 😎</p>
+            </div>
+            <div class="footer__nav">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#hero"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a></li>
+                    <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__redes">
+                <h4>Contactanos</h4>
+                <a href="https://www.instagram.com/lucas_elizalde5/" target="_blank"><i class="fab fa-instagram"></i>
+                    Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61572812620210" target="_blank"><i
+                        class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/5493482654236" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 AdmByte - Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <script src="js/scripts.js"></script>

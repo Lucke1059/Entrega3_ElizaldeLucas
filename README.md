@@ -1,15 +1,98 @@
-# Proyecto CoderHouse - Sitio Web Responsive
+Autor: Lucas Elizalde
 
-Este es mi tercer proyecto del módulo de Desarrollo Web en CoderHouse.  
-Consiste en un sitio web 100% responsive, construido con HTML, SCSS y Bootstrap.  
-El objetivo es aplicar todo lo aprendido sobre maquetado, estilos, responsive design y herramientas modernas de desarrollo.
+Descripción: ADMbyte es una plataforma que ofrece soluciones digitales con actitud 😎. Este proyecto forma parte de la tercera entrega del curso de Desarrollo Web en CoderHouse, enfocándose en la implementación de SASS para mejorar y modularizar los estilos CSS.
 
----
+Tecnologías Utilizadas
+HTML5: Estructura semántica del sitio.
 
-## Tecnologías usadas
+CSS3: Estilización base.
 
-- HTML5
-- SCSS (Sass)
-- Bootstrap
-- Flexbox + Grid
-- Git & GitHub
+SASS: Preprocesador CSS utilizado para:
+
+Nesting: Anidación de selectores para una mejor organización.
+
+Extend: Reutilización de estilos comunes.
+
+Mixins: Creación de funciones reutilizables para estilos.
+
+Variables: Definición de colores y fuentes para mantener consistencia.
+
+Operadores: Operaciones matemáticas para cálculos de medidas y tamaños.
+
+Bootstrap 5: Framework CSS para diseño responsivo y componentes predefinidos.
+
+JavaScript (ES6+): Funcionalidades dinámicas y manipulación del DOM.
+
+Estructura del Proyecto
+El proyecto sigue una estructura modular para facilitar el mantenimiento y escalabilidad:
+
+css
+Copiar
+Editar
+├── index.html
+├── pages/
+│   ├── servicios.html
+│   ├── nosotros.html
+│   └── contacto.html
+├── sass/
+│   ├── base/
+│   │   ├── _reset.scss
+│   │   └── _typography.scss
+│   ├── components/
+│   │   ├── _buttons.scss
+│   │   └── _cards.scss
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _footer.scss
+│   │   └── _grid.scss
+│   ├── pages/
+│   │   ├── _home.scss
+│   │   ├── _services.scss
+│   │   ├── _about.scss
+│   │   └── _contact.scss
+│   ├── utils/
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   └── _functions.scss
+│   └── main.scss
+├── css/
+│   └── main.css
+├── js/
+│   ├── scripts.js
+│   └── navbar.js
+└── assets/
+    ├── images/
+    └── fonts/
+Funcionalidades Destacadas
+Diseño Responsivo: Adaptabilidad en dispositivos móviles y de escritorio utilizando Bootstrap y media queries personalizadas.
+
+Navbar Dinámico: Menú de navegación colapsable con interacción JavaScript.
+
+Botón Flotante de WhatsApp: Enlace directo para contacto rápido, con efectos de hover y animaciones.
+
+Animaciones y Transiciones: Efectos suaves aplicados a diversos elementos para mejorar la experiencia del usuario.
+
+Partículas en el Header: Implementación de un fondo animado con partículas en la sección del header para un efecto visual atractivo.
+
+Instalación y Uso
+Clonar el repositorio:
+
+bash
+Copiar
+Editar
+git clone https://github.com/lucke1059/Entrega3_ElizaldeLucas.git
+Navegar al directorio del proyecto:
+
+bash
+Copiar
+Editar
+cd Entrega3_ElizaldeLucas
+Abrir el archivo index.html en el navegador de preferencia.
+
+Notas
+Compilación de SASS: Se recomienda utilizar una extensión o herramienta que compile SASS a CSS en tiempo real para visualizar los cambios en los estilos.
+
+Enlaces Relativos: Asegurarse de que la estructura de carpetas se mantenga para el correcto funcionamiento de los enlaces y rutas de archivos.
+
+Autor
+Lucas Elizalde

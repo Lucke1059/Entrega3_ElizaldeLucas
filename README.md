@@ -93,6 +93,3 @@ Notas
 Compilación de SASS: Se recomienda utilizar una extensión o herramienta que compile SASS a CSS en tiempo real para visualizar los cambios en los estilos.
 
 Enlaces Relativos: Asegurarse de que la estructura de carpetas se mantenga para el correcto funcionamiento de los enlaces y rutas de archivos.
-
-Autor
-Lucas Elizalde

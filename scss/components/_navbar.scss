@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $primary-color; // reemplazá por tu variable
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  
+    &__logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+  
+    &__links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+  
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  
+    &__toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 768px) {
+      &__links {
+        display: none;
+        flex-direction: column;
+        background-color: $primary-color;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+  
+      &__links.active {
+        display: flex;
+      }
+  
+      &__toggle {
+        display: block;
+      }
+    }
+  }  
